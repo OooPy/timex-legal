@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>隐私政策 - 时间管理X</title>
+<title>隐私政策 - Time X</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 680px; margin: 0 auto; padding: 24px 16px; line-height: 1.7; color: #333; }
   h1 { font-size: 1.6em; }
@@ -19,22 +19,33 @@
 <h1>隐私政策</h1>
 <p class="date">生效日期：2026年7月15日</p>
 
-<p>感谢使用「时间管理X」（以下简称"本应用"）。本隐私政策说明我们如何收集、使用和保护您的信息。</p>
+<p>感谢使用「Time X」（以下简称"本应用"）。本隐私政策说明我们如何收集、使用和保护您的信息。</p>
 
 <h2>1. 数据收集与存储</h2>
 <p>本应用的所有数据（包括项目名称、日期、金额、备注等）均存储在您的设备本地，使用 Apple SwiftData 框架。<strong>我们不收集、上传或存储您的任何个人数据到外部服务器。</strong></p>
+<p><strong>位置数据</strong>：若您授权位置权限，本应用将获取您的大致位置坐标，仅用于在小组件中显示当地天气。位置信息存储在设备本地的 App Group 共享区域，不会上传至我们的服务器。</p>
 
 <h2>2. 网络访问</h2>
-<p>本应用当前版本（V1.0）不需要网络连接即可正常使用。未来版本中若集成 AI 助手功能，您可自行选择是否配置第三方 AI 服务的 API 密钥。该密钥将通过 iOS Keychain 加密存储在设备本地，不会被发送至我们的服务器。</p>
+<p>本应用在以下场景会访问网络：</p>
+<ul>
+  <li><strong>天气服务</strong>：小组件通过 Open-Meteo API 获取当地天气信息。仅发送经纬度坐标，不包含任何个人身份信息。</li>
+  <li><strong>AI 功能</strong>（可选）：您可自行选择是否配置第三方 AI 服务的 API 密钥以启用高级功能。配置后，您的输入内容（文本、照片等）将直接发送至您指定的 AI 服务提供商（如 Google Gemini、OpenAI、Anthropic 等）。API 密钥通过 iOS Keychain 加密存储在设备本地，不会被发送至我们的服务器。请参阅对应 AI 服务提供商的隐私政策了解其数据处理方式。</li>
+  <li><strong>应用内购买</strong>：通过 Apple StoreKit 完成，由 Apple 处理所有支付信息。</li>
+</ul>
+<p>除上述场景外，本应用的核心功能无需网络连接即可正常使用。</p>
 
 <h2>3. 通知权限</h2>
 <p>本应用使用 iOS 本地通知和 AlarmKit 提醒功能。通知内容仅在您的设备上生成和触发，不经过任何外部服务器。</p>
 
 <h2>4. 第三方服务</h2>
-<p>本应用当前版本不集成任何第三方分析、广告或追踪 SDK。</p>
+<p>本应用不集成任何第三方分析、广告或追踪 SDK。涉及的第三方服务仅限：</p>
+<ul>
+  <li>Open-Meteo（天气数据，免费开源 API）</li>
+  <li>用户自行配置的 AI 服务提供商（可选）</li>
+</ul>
 
 <h2>5. 数据安全</h2>
-<p>您的数据受到 iOS 系统级别的沙箱保护和设备加密。敏感信息（如未来版本中的 API 密钥）使用 iOS Keychain 加密存储。</p>
+<p>您的数据受到 iOS 系统级别的沙箱保护和设备加密。敏感信息（如 AI API 密钥）使用 iOS Keychain 加密存储。</p>
 
 <h2>6. 数据删除</h2>
 <p>您可通过以下方式删除数据：</p>
